@@ -99,3 +99,28 @@ purchase sweets, while admin users can manage inventory.
 ![alt text](assets/5.png) 
 
 ![alt text](assets/6.png)
+
+---
+
+## My AI Usage
+
+### Tools Used
+- ChatGPT
+- GitHub Copilot
+- Antigravity
+- Warp Terminal
+
+### How I Used AI
+- Used ChatGPT and Antigravity to plan the application architecture and
+  scaffold backend modules and Prisma schema.
+- Used GitHub Copilot to assist with boilerplate code and test case generation.
+- Used AI tools to debug integration issues such as role-based access control
+  and frontend–backend data flow.
+- All AI-generated code was reviewed, modified, and integrated manually.
+
+### Reflection
+AI tools significantly improved development speed and helped me focus on
+architecture, testing strategy, and business logic. I ensured that I fully
+understood all generated code and treated AI as an assistant rather than a
+replacement for reasoning or decision-making.
+
