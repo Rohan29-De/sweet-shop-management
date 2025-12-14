@@ -25,3 +25,9 @@ model Sweet {
   createdAt DateTime @default(now())
 }
 
+enum Role {
+  USER
+  ADMIN
+}
+
+
