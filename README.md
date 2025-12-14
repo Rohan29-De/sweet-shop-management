@@ -1,71 +1,101 @@
 # Sweet Shop Management System
 
-A full-stack application for managing a sweet shop inventory and sales, built with NestJS and React.
+## Overview
+The Sweet Shop Management System is a full-stack web application designed to manage
+sweets inventory, user authentication, and purchase operations. The project was built
+as part of a TDD-focused kata to demonstrate backend API design, database integration,
+frontend development, clean coding practices, and responsible usage of AI tools.
 
+The system supports role-based access control, allowing regular users to browse and
+purchase sweets, while admin users can manage inventory.
 ## Tech Stack
 
-**Backend:**
-- NestJS (Node.js framework)
+### Backend
+- Node.js
 - TypeScript
-- PostgreSQL (Database)
-- Prisma (ORM)
-- JWT Authentication & BCrypt
-- Jest (Testing)
+- NestJS
+- PostgreSQL
+- Prisma ORM
+- JWT Authentication
+- Jest & Supertest (Testing)
 
-**Frontend:**
-- React (Vite)
+### Frontend
+- React
 - TypeScript
-- Tailwind CSS (Styling)
-- Axios (HTTP Client)
-- React Router
+- Vite
+- Axios
+- CSS / Tailwind (if used)
 
+### Tools
+- Git & GitHub
+- GitHub Copilot
+- ChatGPT
+- Antigravity
+- Warp Terminal
 ## Features
 
-- **Authentication**: Secure Login/Register with JWT. Role-based access (USER, ADMIN).
-- **Dashboard**: Browse sweets, search, and purchase items. Matches "Nest Mart" aesthetic.
-- **Admin Panel**: Add, Update, Delete sweets and view inventory.
-- **Inventory Management**: Atomic transactions for purchases to prevent overselling.
+### Authentication
+- User registration and login
+- JWT-based authentication
+- Secure password hashing
+- Role-based access control (USER / ADMIN)
 
-## API Documentation
+### Sweets Management
+- View all available sweets
+- Search sweets by name, category, or price range
+- Admin-only CRUD operations for sweets
 
-| Method | Endpoint | Description | Access |
-|Or---|---|---|---|
-| POST | `/api/auth/register` | Register new user | Public |
-| POST | `/api/auth/login` | Login user | Public |
-| GET | `/api/sweets` | Get all sweets (search via ?q=) | Authenticated |
-| POST | `/api/sweets` | Create sweet | Admin |
-| PATCH | `/api/sweets/:id` | Update sweet | Admin |
-| DELETE | `/api/sweets/:id` | Delete sweet | Admin |
-| POST | `/api/sweets/:id/purchase` | Buy a sweet (decrease stock) | Authenticated |
+### Inventory Management
+- Purchase sweets (stock decreases)
+- Prevents purchasing when stock is insufficient
+- Admin-only restocking functionality
 
-## Setup & Run
+### Frontend
+- Responsive single-page application
+- Dashboard displaying available sweets
+- Disabled purchase button when quantity is zero
+- Admin-only UI elements hidden from regular users
+## API Endpoints
+
+### Auth
+- POST `/api/auth/register`
+- POST `/api/auth/login`
+
+### Sweets (Protected)
+- POST `/api/sweets` (Admin only)
+- GET `/api/sweets`
+- GET `/api/sweets/search`
+- PUT `/api/sweets/:id` (Admin only)
+- DELETE `/api/sweets/:id` (Admin only)
+
+### Inventory (Protected)
+- POST `/api/sweets/:id/purchase`
+- POST `/api/sweets/:id/restock` (Admin only)
+## Setup Instructions
 
 ### Prerequisites
-- Node.js (v18+)
-- PostgreSQL Database
+- Node.js (v18+ recommended)
+- PostgreSQL
+- Docker (optional, for PostgreSQL)
+- Git
 
-### Installation
+### Backend Setup
+* To run backend tests:
+```
+   bash
+   cd backend
+   npm install
+```
+## Screenshots
 
-1.  **Clone the repo**
-2.  **Backend Setup**
-    ```bash
-    cd backend
-    npm install
-    # Update .env with your DATABASE_URL
-    npx prisma db push
-    npm run start:dev
-    ```
-3.  **Frontend Setup**
-    ```bash
-    cd frontend
-    npm install
-    npm run dev
-    ```
+![alt text](assets/1.png) 
 
-## TDD Approach
-The backend core logic (Auth, Sweets, Inventory) was built using TDD principles. 
-- E2E tests are located in `backend/test/`.
-- Run tests with `npm run test:e2e` in the backend directory.
+![alt text](assets/2.png) 
 
-## AI Usage
-This project was co-authored with AI (Google DeepMind) to accelerate development while ensuring clean architecture and best practices.
+![alt text](assets/3.png) 
+
+![alt text](assets/4.png)
+
+![alt text](assets/5.png) 
+
+![alt text](assets/6.png)
