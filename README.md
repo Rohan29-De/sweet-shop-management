@@ -113,9 +113,12 @@ purchase sweets, while admin users can manage inventory.
 ### How I Used AI
 - Used ChatGPT and Antigravity to plan the application architecture and
   scaffold backend modules and Prisma schema.
+
 - Used GitHub Copilot to assist with boilerplate code and test case generation.
+
 - Used AI tools to debug integration issues such as role-based access control
   and frontend–backend data flow.
+
 - All AI-generated code was reviewed, modified, and integrated manually.
 
 ### Reflection
